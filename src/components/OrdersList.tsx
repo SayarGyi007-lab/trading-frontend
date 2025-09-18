@@ -58,7 +58,7 @@ function OrdersList() {
                     <span className="font-semibold">Type:</span> {order.order_type?.name}
                   </p>
                   <p className="text-sm text-indigo-700 mb-1">
-                    <span className="font-semibold">Price:</span> ${order.price}
+                    <span className="font-semibold">Price:</span> ${order.price} per 1 {order.unit}
                   </p>
                   <p className="text-sm text-indigo-700 mb-3">
                     <span className="font-semibold">Volume:</span> {order.volume} {order.unit}
@@ -97,7 +97,7 @@ function OrdersList() {
                     <span className="font-medium">Type:</span> {order.order_type?.name}
                   </p>
                   <p className="text-sm text-gray-600 mb-1">
-                    <span className="font-medium">Price:</span> ${order.price}
+                    <span className="font-medium">Price:</span> ${order.price} per 1 {order.unit}
                   </p>
                   <p className="text-sm text-gray-600 mb-1">
                     <span className="font-medium">Volume:</span> {order.volume} {order.unit}
