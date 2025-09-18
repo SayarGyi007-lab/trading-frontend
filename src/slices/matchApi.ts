@@ -7,8 +7,8 @@ export interface Matching{
     volume: number
     timestamp: string
     product: { name: string }
-    seller: { name: string }
-    buyer: { name: string }
+    seller: { name: string, phone: string }
+    buyer: { name: string, phone: string }
     unit: string
   }
 

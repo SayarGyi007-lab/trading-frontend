@@ -39,10 +39,16 @@ const UserMatchings: React.FC = () => {
                   <span className="font-medium">Volume:</span> {match.volume} {match.unit}
                 </p>
                 <p className="text-sm text-gray-700 mb-1">
-                  <span className="font-medium">Seller:</span> {match.seller?.name}
+                  <span className="font-medium">Seller:</span> {match.seller?.name} 
+                </p>
+                <p className="text-sm text-gray-700 mb-1">
+                  <span className="font-medium">Seller Ph No:</span>  {match.seller.phone}
                 </p>
                 <p className="text-sm text-gray-700 mb-1">
                   <span className="font-medium">Buyer:</span> {match.buyer?.name}
+                </p>
+                <p className="text-sm text-gray-700 mb-1">
+                  <span className="font-medium">Buyer Ph No:</span> {match.buyer.phone}
                 </p>
                 <p className="text-xs text-gray-600 mt-2">
                   {new Date(match.timestamp).toLocaleString()}
