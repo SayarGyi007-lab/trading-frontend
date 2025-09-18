@@ -15,8 +15,8 @@ import UpdateOrder from './pages/UpdateOrder.tsx'
 import History from './components/History.tsx'
 import MyOrdersPage from './pages/OrderHistory.tsx'
 import MyMatchingsPage from './pages/UserMatchHistory.tsx'
-import AllMatchings from './pages/admin/matching.tsx'
-import AddProduct from './pages/admin/Home.tsx'
+import AllMatchings from './pages/admin/AllMatching.tsx'
+import AddProduct from './pages/admin/AddProduct.tsx'
 
 const router = createBrowserRouter([
   {
