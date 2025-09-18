@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { ShoppingCart, TrendingUp, Mail } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import intro from "../assets/ec1.jpg"
+import about from "../assets/ec2.jpg"
 
 export default function HomePage() {
 
@@ -22,7 +24,7 @@ export default function HomePage() {
   id="intro"
   className="relative min-h-screen flex items-center justify-center text-center px-6 text-white bg-cover bg-center bg-no-repeat"
   style={{
-    backgroundImage: "url('src/assets/ec1.jpg')", 
+    backgroundImage: `url(${intro})`, 
   }}
 >
   <div className="bg-black/20 backdrop-blur-sm rounded-2xl p-8 sm:p-16 flex flex-col items-center justify-center gap-6">
@@ -74,7 +76,7 @@ export default function HomePage() {
           transition={{ duration: 0.8 }}
         >
           <img
-            src="src/assets/ec2.jpg"
+            src={about}
             alt="About TradeX"
             className="w-full h-auto rounded-2xl shadow-lg object-cover"
           />

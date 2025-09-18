@@ -5,6 +5,7 @@ import { useForm, type SubmitHandler } from "react-hook-form"
 import { useRegisterMutation } from "../slices/userApi"
 import { Link, useNavigate } from "react-router-dom"
 import { toast } from "react-toastify"
+import bgImage from "../assets/register.jpg"
 
 type formInputs = z.infer<typeof registerSchmea>
 
@@ -29,7 +30,7 @@ function Register() {
   return (
     <div
       className="w-full min-h-screen flex items-center justify-center px-4 bg-cover bg-center relative"
-      style={{ backgroundImage: "url('src/assets/register.jpg')" }} 
+      style={{ backgroundImage: `url(${bgImage})` }} 
     >
       <div className="w-full max-w-6xl flex flex-col md:flex-row items-center gap-8">
         <div className="w-full md:w-1/2 text-white text-center md:text-left p-4">

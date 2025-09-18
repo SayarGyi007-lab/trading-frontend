@@ -9,6 +9,7 @@ import { LoginSchema } from '../schema/login.schema'
 import { useLoginMutation } from '../slices/userApi'
 import type { RootState } from '../store'
 import { setUserInfo } from '../slices/auth'
+import bgImg from "../assets/ec2.webp"
 
 type FormInputs = z.infer<typeof LoginSchema>
 
@@ -51,7 +52,7 @@ const Login = () => {
   return (
     <div
       className="w-full min-h-screen flex items-center justify-center px-4 bg-cover bg-center relative"
-      style={{ backgroundImage: "url('src/assets/ec2.webp')" }}
+      style={{ backgroundImage:`url(${bgImg})` }}
     >
       <div className="bg-black/40 backdrop-blur-md rounded-2xl shadow-xl w-full max-w-6xl flex flex-col md:flex-row overflow-hidden">
         

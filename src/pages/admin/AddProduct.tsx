@@ -32,7 +32,6 @@ const AddProduct = () => {
     <div className="p-8 bg-gray-100 min-h-screen">
       <h1 className="text-4xl font-extrabold mb-8 text-gray-800 text-center">Admin Product Management</h1>
 
-      {/* Add Product */}
       <div className="flex flex-col md:flex-row gap-4 mb-10 justify-center">
         <input
           type="text"
@@ -49,7 +48,6 @@ const AddProduct = () => {
         </button>
       </div>
 
-      {/* Product List */}
       {isLoading ? (
         <p className="text-center text-gray-500 text-lg animate-pulse">Loading products...</p>
       ) : (
