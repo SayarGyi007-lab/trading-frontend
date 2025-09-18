@@ -2,6 +2,7 @@ import { useDeleteOrderMutation, useGetAllOrderQuery } from '../slices/orderApi'
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import type { RootState } from '../store'
+import bgImg from "../assets/ec1.jpg"
 
 function OrdersList() {
   const { data, isLoading } = useGetAllOrderQuery()
@@ -34,7 +35,7 @@ function OrdersList() {
   return (
     <div
       className="w-full min-h-screen bg-cover bg-center relative"
-      style={{ backgroundImage: "url('src/assets/ec1.jpg')" }} 
+      style={{ backgroundImage:  `url(${bgImg})` }} 
     >
       <div className="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
 
