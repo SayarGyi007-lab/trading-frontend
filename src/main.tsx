@@ -17,6 +17,7 @@ import MyOrdersPage from './pages/OrderHistory.tsx'
 import MyMatchingsPage from './pages/UserMatchHistory.tsx'
 import AllMatchings from './pages/admin/AllMatching.tsx'
 import AddProduct from './pages/admin/AddProduct.tsx'
+import AdminHome from './pages/admin/Home.tsx'
 
 const router = createBrowserRouter([
   {
@@ -40,10 +41,6 @@ const router = createBrowserRouter([
         element: <Register/>
       },
       {
-        path:"/admin",
-        element: <Protect adminOnly={true}> <AddProduct/></Protect> 
-      },
-      {
         path: "/order/create",
         element: <Protect><CreateOrder/></Protect>
       },
@@ -64,9 +61,14 @@ const router = createBrowserRouter([
         element: <Protect><MyMatchingsPage /></Protect> 
       },
       {
-        path:"/admin/matching",
-        element: <Protect adminOnly={true}> <AllMatchings/></Protect> 
+        path: "/admin",
+        element: <Protect adminOnly={true}><AdminHome/></Protect>,
+        children: [
+          { path: "addproduct", element: <AddProduct/> },
+          { path: "matching", element: <AllMatchings/> }
+        ]
       }
+      
     ]
   }
 ])

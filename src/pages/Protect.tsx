@@ -17,9 +17,10 @@ const Protect = ({ children, adminOnly = false }: Props) => {
       navigate("/", { replace: true });
     } 
     else if (adminOnly && userInfo.role !== "ADMIN") {
-        navigate("/order", { replace: true });
-      }
+      navigate("/order", { replace: true });
+    }
   }, [userInfo, adminOnly, navigate]);
+  
 
   
 
