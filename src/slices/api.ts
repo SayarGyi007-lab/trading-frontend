@@ -8,6 +8,6 @@ const baseUrl =
 export const apiSlice = createApi({
     reducerPath: "apiSlice",
     baseQuery: fetchBaseQuery({baseUrl: `${baseUrl}`, credentials: "include"}),
-    tagTypes: ["Orders","Matching"],
+    tagTypes: ["Orders","Matching","Products"],
     endpoints:()=>({}),
 })
